@@ -9,8 +9,8 @@ This library was created to allow multiple gamepad objects to interface with Pyg
 Features:
 
 Unlimited connected controler support 
-time out                              ( awating controllers time out )
-Virtual port time put                 ( dead controller detection )
+time out ( awating controllers time out )
+Virtual port time put ( dead controller detection )
 Multi controller rumble support 
 Remap/ macro support
 Full API settings 
