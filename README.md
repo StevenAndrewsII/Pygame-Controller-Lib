@@ -1,4 +1,4 @@
-# Pygame-Controller-Lib
+# PygameController Lib
 A full library to support multi-controllers in pygame!
 
 This library was created to allow multiple gamepad objects to interface with Pygame. 
