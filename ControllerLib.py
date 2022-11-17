@@ -394,7 +394,7 @@ class CM(object):
        
 
     #-------------------------------------------------------------------------------------------------------------------
-    # Internal updater: // controlls locked/limited at 60 FPS 
+    # Internal updater: // Externally update at some set/locked FPS
     #-------------------------------------------------------------------------------------------------------------------
     def update_(self):
         # internal state machines 
