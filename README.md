@@ -44,10 +44,11 @@ Set_rumble          (      port_id   ,   [ motor_L,motor_R,duration in seconds  
 
 
 DEV NOTE:
-> Activily developing this further
-> Future Features:
->
-> D-pad support 
-> Remove virtual port 
-> Add virtual port 
+   
 
+    >      Activily developing this further
+    >
+    >      Future Features:
+    >      D-pad support            
+    >      Add virtual port  
+    >      Remove virtual port
