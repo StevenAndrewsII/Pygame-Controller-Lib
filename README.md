@@ -23,18 +23,17 @@ Features:
 Functions list: ( External use ) 
 
 Get_button          (      port_id   ,   button   )                                     
->> Gets the selected button state of a controller at a virtual port
+> Gets the selected button state of a controller at a virtual port
 
 Get_axis            (      port_id   ,   axis     )                                     
->> Gets the selected axis positions of a controller at a virtual port  
+> Gets the selected axis positions of a controller at a virtual port  
 
 Get_stick_angle     (      port_id   ,   axis     )                                     
->> gets the stick angle in degrees about the center dead zone of stick 
+> gets the stick angle in degrees about the center dead zone of stick 
 
 Set_rumble          (      port_id   ,   [ motor_L,motor_R,duration in seconds  ] )     
->> Set the rumble of a controller on a port ( motor power 0 -> 1 )
+> Set the rumble of a controller on a port ( motor power 0 -> 1 )
 
 
-Internal updater :  ( call externally in main loop )
-Update ( NA )  
->> Takes no arguments : limit speed in main loop ( see library for information on settings and timer calibration )
+ Update             ( NA )  :  Internal state machine updater : ( call externally in main loop )
+> Takes no arguments : limit speed in main loop ( see library for information on settings and timer calibration )
