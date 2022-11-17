@@ -1,14 +1,33 @@
 class CM(object):
     """     Controller Module       """
     """ 
-    // -----------------------------------------------------------------------------------------------------------------------------
-    This API is created to handle  "virtual ports"  interactions and automate handeling with multiple controller inputs.
-    // -----------------------------------------------------------------------------------------------------------------------------
+    // #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            This API is created to handle  "virtual ports"  interactions and automate handeling with multiple controller inputs.
+    // #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    #
+    #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    #       External Utility fuctions:
+    #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    #
+    #       Get_button          (      port_id   ,   button   )                                     Gets the selected button state on a virtual port 
+    #       Get_axis            (      port_id   ,   axis     )                                     Gets the selected axis position on a virtual port         
+    #       Get_stick_angle     (      port_id   ,   axis     )                                     gets the stick angle in degrees about the center dead zone of the stick
+    #       set_rumble          (      port_id   ,   [ motor_L,motor_R,duration in seconds  ] )     Set the rumble of a controller on a port ( motor power 0 -> 1 )
+    #       
+    #       
+    #       Update_             (      NA      )                                                    Limit speed in main loop // internal system updater ( match set fps )
+    #                                                                                               * NOTE:
+    #                                                                                               In settings timings must be multiplied by the set frame rate number 
+    #                                                                                               Example:  4 seconds * 120 FPS  -> this allows the timers to function 
+    #
+    #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     API Writen By:                                   Steven Andrews II
     Project By:                                   [[ Steven Andrews II ]]                                       - Fall 2022 
-    // -----------------------------------------------------------------------------------------------------------------------------
+    // #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     """ 
 
+    
+    
 
     def __init__(   self    ,   pygame  ,  math ,  number_of_ports   ):
     #       load and defined defualt varables for lib 
@@ -251,27 +270,6 @@ class CM(object):
                                )
                            break
 
-
-
-    #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    #       External Utility fuctions:
-    #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    #
-    #       Get_button          (      port_id   ,   button   )                                     Gets the selected button state on a virtual port 
-    #       Get_axis            (      port_id   ,   axis     )                                     Gets the selected axis position on a virtual port         
-    #       Get_stick_angle     (      port_id   ,   axis     )                                     gets the stick angle in degrees about the center dead zone of the stick
-    #       set_rumble          (      port_id   ,   [ motor_L,motor_R,duration in seconds  ] )     Set the rumble of a controller on a port ( motor power 0 -> 1 )
-    #       
-    #       
-    #       Update_             (      NA      )                                                    Limit speed in main loop // internal system updater ( match set fps )
-    #                                                                                               * NOTE:
-    #                                                                                               In settings timings must be multiplied by the set frame rate number 
-    #                                                                                               Example:  4 seconds * 120 FPS  -> this allows the timers to function 
-    #
-    #------------------------------------------( internal use functions )-------------------------------------------------------------------------------------------------------
-    #       Attach(     port id  / joy id    )                           Attaches a controller to a virtual port
-    #       Dettach(    port id     )                                    Dettachs a controller from a virtual port
-    #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
