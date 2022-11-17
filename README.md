@@ -14,7 +14,7 @@ Features:
     >      Controller remapping 
     >      Time out on "virtual ports" 
     >      Awaitng contollers timeout
-    >      Muti controller rumble support
+    >      Multi controller rumble support
     >      Joystick handling
     >      Controller to port auto aisgnment 
 
