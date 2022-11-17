@@ -8,9 +8,9 @@ This library was created to allow multiple gamepad objects to interface with Pyg
 
 Features:
 
-    >      Full controller support
-    >      Multi controller support "virtual ports" ( no set limit )
-    >      Controller disconnecton handling 
+    >      Full controller support                      ( Native Xbox support )
+    >      Multi controller support "virtual ports"     ( no set limit )
+    >      Controller disconnecton handling             
     >      Controller remapping 
     >      Time out on "virtual ports" 
     >      Awaitng contollers timeout
@@ -35,4 +35,6 @@ Set_rumble          (      port_id   ,   [ motor_L,motor_R,duration in seconds  
 >> Set the rumble of a controller on a port ( motor power 0 -> 1 )
 
 
-
+Internal updater :  ( call externally in main loop )
+Update ( NA )  
+>> Takes no arguments : limit speed in main loop ( see library for information on settings and timer calibration )
