@@ -37,3 +37,17 @@ Set_rumble          (      port_id   ,   [ motor_L,motor_R,duration in seconds  
 
  Update             ( NA )  :  Internal state machine updater : ( call externally in main loop )
 > Takes no arguments : limit speed in main loop ( see library for information on settings and timer calibration )
+
+
+
+
+
+
+DEV NOTE:
+> Activily developing this further
+> Future Features:
+>
+> D-pad support 
+> Remove virtual port 
+> Add virtual port 
+
