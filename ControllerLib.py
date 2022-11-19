@@ -23,7 +23,7 @@ class PyGC(object):
     # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     #      Initializing the lib: ( copy and paste )
     #               
-    #               import Math                 # import required libraries 
+    #               import math                 # import required libraries 
     #               import pygame
     #               import PygameController
     #            
