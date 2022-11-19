@@ -29,7 +29,7 @@ class CM(object):
     
     
 
-    def __init__(   self    ,   pygame  ,  math ,  number_of_ports   ):
+    def __init__(   self    ,   pygame  ,  math ,  number_of_ports , set_fps ):
     #       load and defined defualt varables for lib 
 
        self.pygame                          = pygame                                #   load modules pushed from start of the class
@@ -37,14 +37,14 @@ class CM(object):
        
        #    Lib/ port settings  ( editable )
        self.settings = {
-           "time_out_"                      :120*60,                                #   timeout state for controllers awaiting an open port
-           "port_activity"                  :120*60,                                #   timeout state for virtual ports with dead or non active controllers 
-           "port_activity_deley"            :1*60,                                  #   deley that the activity atate will hold before resetting 
+           "time_out_"                      :120 *set_fps,                          #   timeout state for controllers awaiting an open port
+           "port_activity"                  :120 *set_fps,                          #   timeout state for virtual ports with dead or non active controllers 
+           "port_activity_deley"            :1   *set_fps,                          #   deley that the activity atate will hold before resetting 
            "port_read_deley"                :10,                                    #   over read on USB port from event call                         ( safty, if unsure leave at 10 frames )  
-           "stick_deadZone"                 :.3                                     #   stick sensitivity             
+           "stick_deadZone"                 :.3                                     #   stick sensitivity  
+           "set_fps"                        :set_fps                                #   set to your FPS
        }
-       
-     
+      
        #    variabls 
        self.controllers_                    = { 0 : {} , 1 : {} }                   #   Controller buffer // holds raw hardware objects   [  0 = joystick object  // 1 = connection timers  ]
        self.gamepad_count                   = pygame.joystick.get_count()           #   Indexing 
@@ -257,10 +257,10 @@ class CM(object):
         for k,v in self.port_.items():
             if v["rumble_state"] == True:
                 v["rumble_t"]           = v["rumble_t"] + 1
-                if v["rumble_t"] >  v["rumble_dur"]*60:
+                if v["rumble_t"] >  v["rumble_dur"]*self.settings["set_fps"]:
                    v["rumble_t"]        = 0
                    v["rumble_state"]    = False
-                if v["rumble_t"] <= v["rumble_dur"]*60:
+                if v["rumble_t"] <= v["rumble_dur"]*self.settings["set_fps"]:
                    for k_,v_ in self.controllers_[0].items():
                        if k_ == v["attached"]:
                            v_.rumble(
