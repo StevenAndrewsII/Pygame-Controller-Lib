@@ -27,7 +27,7 @@ class PyGC(object):
     #               import pygame
     #               import PygameController
     #            
-    #               PyGC__     =     PygameController.PyGC(  pygame , math , # of controllers (int) , fps reference (int) )
+    #               PyGC__     =     PygameController.PyGC(  pygame , math , # of virtual ports (int) , fps reference (int) )
     #      
     #
     #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
