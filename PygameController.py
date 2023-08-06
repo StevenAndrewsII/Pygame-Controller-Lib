@@ -49,7 +49,7 @@ class PyGC(object):
        self.settings = {
            "time_out_"                      :120 *set_fps,                          #   timeout state for controllers awaiting an open port
            "port_activity"                  :120 *set_fps,                          #   timeout state for virtual ports with dead or non active controllers 
-           "port_activity_deley"            :1   *set_fps,                          #   deley that the activity atate will hold before resetting 
+           "port_activity_deley"            :1   *set_fps,                          #   deley that the activity state will hold before resetting 
            "port_read_deley"                :10,                                    #   over read on USB port from event call                         ( safty, if unsure leave at 10 frames )  
            "stick_deadZone"                 :.3,                                    #   stick sensitivity  
            "set_fps"                        :set_fps                                #   set to your FPS
